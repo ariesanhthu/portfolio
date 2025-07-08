@@ -46,7 +46,7 @@ const Hero = () => {
           <div className="relative w-full max-w-[400px] mx-auto">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur-md opacity-75 animate-pulse"></div>
             <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQF4XU85PT7SAw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694009546169?e=1746057600&v=beta&t=WeaPGfGayjK2xorpw8ijKOZN3s_lJOmLpMMHrrvwPv4"
+              src="/avatar.png"
               alt="Nguyễn Anh Thư"
               className="rounded-full w-full h-auto object-cover relative z-10"
             />
