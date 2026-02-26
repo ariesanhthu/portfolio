@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Timeline from './components/Timeline';
+import Skills from './components/Skills';
+import Honors from './components/Honors';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
@@ -12,7 +14,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Skills />
         <Timeline />
+        <Honors />
         <Projects />
       </main>
       <Footer />

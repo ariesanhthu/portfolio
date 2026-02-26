@@ -31,11 +31,25 @@ const Navbar = () => {
             About
           </Link>
           <Link
+            to="skills"
+            smooth={true}
+            className="cursor-pointer text-light/80 hover:text-primary transition-colors"
+          >
+            Skills
+          </Link>
+          <Link
             to="timeline"
             smooth={true}
             className="cursor-pointer text-light/80 hover:text-primary transition-colors"
           >
-            Experience and Achievements
+            Experience & Education
+          </Link>
+          <Link
+            to="honors"
+            smooth={true}
+            className="cursor-pointer text-light/80 hover:text-primary transition-colors"
+          >
+            Honors
           </Link>
           <Link
             to="projects"

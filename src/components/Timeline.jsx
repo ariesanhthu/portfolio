@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const TimelineItem = ({ year, title, company, description, achievements }) => (
+const TimelineItem = ({ year, title, company, companyUrl, description, achievements }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -13,8 +13,14 @@ const TimelineItem = ({ year, title, company, description, achievements }) => (
     <div className="glass-effect p-6 rounded-lg shadow-md hover:shadow-primary/20 transition-all duration-300">
       <span className="text-sm text-primary font-semibold">{year}</span>
       <h3 className="text-xl font-bold mt-2 text-light">{title}</h3>
-      <p className="text-light/70 font-medium">{company}</p>
-      <p className="mt-2 text-light/80">{description}</p>
+      <p className="text-light/70 font-medium">
+        {companyUrl ? (
+          <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">{company}</a>
+        ) : (
+          company
+        )}
+      </p>
+      {description && <p className="mt-2 text-light/80">{description}</p>}
       {achievements && (
         <ul className="mt-2 list-disc pl-4">
           {achievements.map((achievement, index) => (
@@ -29,32 +35,24 @@ const TimelineItem = ({ year, title, company, description, achievements }) => (
 const Timeline = () => {
   const experiences = [
     {
-      year: 'Jun 2024',
-      title: 'Full-Stack Developer',
+      year: 'Jun 2024 - Present',
+      title: 'Web Developer (Freelance)',
       company: 'Blue Moonlight Travel & Environment CO., LTD',
-      description: 'Full-Stack Developer specializing in designing, developing, and maintaining scalable web systems with Next.js, Reactjs, TypeScript, Tailwind CSS, MongoDB, and Vercel.',
+      companyUrl: 'https://www.facebook.com/profile.php?id=61569547720275',
+      description: 'Built and deployed fullstack applications with Next.js and MongoDB, including REST APIs and AI integrations. Achieved ~1.8s LCP and sub-300ms API response time. Optimized MongoDB queries via indexing and schema design.',
     },
     {
-      year: 'Oct 2024',
-      title: '1st Place - HCMUS AI INNOVATION 2024',
-      company: 'Award issued by The Faculty of Information Technology, VNUHCM-University of Science, Bosch Global Software Technologies',
-      description: 'AI-Powered Smart Glasses Project',
-      achievements: [
-        'Led the development of AI-Powered Smart Glasses for hazard detection and information accessibility for the visually impaired',
-        'Responsible for team leadership, product design, and technology research',
-      ]
+      year: '2020 - 2023',
+      title: 'Specialized Informatics',
+      company: 'Thoai Ngoc Hau High School for the Gifted',
+      description: null,
     },
-     {
-      year: 'Dec 2024',
-      title: '7th Place in the Final Round of the SoICT Hackathon 2024',
-      company: 'SoICT - HUST',
-      description: 'Real-time Monitoring Surveillance System Using Deep Learning Models for Detecting Child Abuse and Sending Alerts and Sending Alerts to Guardians',
-      achievements: [
-        'Led the team to develop the product',
-        'Researched the technology used',
-        'Presented the project'
-      ]
-    }
+    {
+      year: '2023 - Present',
+      title: 'Information Technology',
+      company: 'University of Science, VNUHCM',
+      description: 'GPA: 3.3/4.0',
+    },
   ];
 
   return (
@@ -66,7 +64,7 @@ const Timeline = () => {
           viewport={{ once: true }}
           className="text-3xl font-bold text-center mb-12 gradient-text"
         >
-          Experience and Achievements
+          Experience & Education
         </motion.h2>
         
         <div className="max-w-3xl mx-auto">

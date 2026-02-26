@@ -15,11 +15,11 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text">Nguyễn Anh Thư</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-light/70 mb-6">
-            Web Developer | HCMUS Student
+            Student at VNUHCM, University of Science
           </h2>
           <p className="text-light/80 mb-8">
-            Passionate about creating beautiful and functional web experiences.
-            Currently studying at <a href="https://hcmus.edu.vn/" target="_blank" className="text-primary hover:text-secondary transition-colors">University of Science - VNUHCM</a>
+            AI & Web Developer — passionate about building fullstack applications, AI/ML systems, and computer vision.
+            Studying Information Technology at <a href="https://hcmus.edu.vn/" target="_blank" className="text-primary hover:text-secondary transition-colors">University of Science - VNUHCM</a>
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <a

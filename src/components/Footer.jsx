@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaMobile } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -34,13 +34,26 @@ const Footer = () => {
               >
                 <FaEnvelope size={24} className="hover:animate-pulse" />
               </a>
+              <a
+                href="https://ariesanhthu.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light/80 hover:text-primary transition-colors"
+              >
+                <FaGlobe size={24} className="hover:animate-pulse" />
+              </a>
+              <a
+                href="tel:+84348030141"
+                className="text-light/80 hover:text-primary transition-colors"
+              >
+                <FaMobile size={24} className="hover:animate-pulse" />
+              </a>
             </div>
           </div>
           
           <div className="text-right">
             <h3 className="text-xl font-bold mb-2 text-light">Nguyễn Anh Thư</h3>
-            <p className="text-light/60">Web Developer</p>
-            <p className="text-light/60">HCMUS Student</p>
+            <p className="text-light/60">Student at VNUHCM, University of Science</p>
           </div>
         </div>
         

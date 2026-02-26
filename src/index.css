@@ -60,3 +60,24 @@ body {
     linear-gradient(90deg, rgba(0, 102, 204, 0.1) 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
+/* Marquee skills animation - slow horizontal scroll */
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+.marquee-track.marquee-pause {
+  animation-play-state: paused;
+}
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
