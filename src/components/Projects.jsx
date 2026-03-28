@@ -14,6 +14,8 @@ const ProjectCard = ({ title, subtitle, description, technologies, githubUrl, li
       <img
         src={image || "https://via.placeholder.com/400x200"}
         alt={title}
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 filter grayscale group-hover:grayscale-0"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-dark-card/50 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
@@ -108,7 +110,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-dark relative">
+    <section className="section-padding bg-dark relative">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/20 to-transparent" />
       
       <div className="container-width relative z-10">

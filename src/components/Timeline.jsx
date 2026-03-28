@@ -91,7 +91,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section id="timeline" className="section-padding bg-darker relative">
+    <section className="section-padding bg-darker relative">
       <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       
       <div className="container-width relative z-10">

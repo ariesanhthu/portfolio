@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaMobile } from 'react-icons
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-darker py-12">
+    <footer className="bg-darker py-12">
       <div className="container-width px-4">
         <div className="grid md:grid-cols-2 gap-8">
           <div>

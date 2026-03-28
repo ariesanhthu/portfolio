@@ -14,7 +14,7 @@ const Skills = () => {
   const skillsRow = [...allSkills, ...allSkills, ...allSkills];
 
   return (
-    <section id="skills" className="section-padding bg-dark relative border-y border-white/5 overflow-hidden">
+    <section className="section-padding bg-dark relative border-y border-white/5 overflow-hidden">
       {/* Abstract light bursts */}
       <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />

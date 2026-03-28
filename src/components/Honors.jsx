@@ -63,7 +63,7 @@ const HonorCard = ({ honor, index }) => (
 
 const Honors = () => {
   return (
-    <section id="honors" className="section-padding bg-darker relative">
+    <section className="section-padding bg-darker relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary/10 via-darker to-darker pointer-events-none" />
       
       <div className="container-width relative z-10">
