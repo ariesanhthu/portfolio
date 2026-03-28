@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 }
@@ -16,54 +16,56 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #0f172a;
-  color: #f8fafc;
+  background-color: #000010; /* Deeper Night Skies */
+  color: #ffffff; /* Brightest white */
+  overflow-x: hidden;
 }
 
 /* Custom utility classes */
 .section-padding {
-  @apply py-12 px-4 md:px-8 lg:px-16;
+  @apply py-16 px-4 md:px-8 lg:px-16;
 }
 
 .container-width {
   @apply max-w-7xl mx-auto;
 }
 
+/* New Glowing & Glass Effects */
 .glow-effect {
   @apply transition-all duration-300;
 }
 
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(0, 102, 204, 1), 0 0 30px rgba(0, 191, 255, 0.6);
-  }
+.glow-effect:hover {
+  box-shadow: 0 0 15px theme('colors.primary'), 0 0 30px theme('colors.secondary');
 }
 
-.glow-effect:hover {
-  animation: glow 2s ease-out infinite alternate;
+.text-glow {
+  text-shadow: 0 0 10px theme('colors.primary');
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  /* Removed gradient as requested, mapped to primary color */
+  @apply text-primary font-bold;
+  text-shadow: 0 0 15px rgba(208, 255, 164, 0.3);
 }
 
 .glass-effect {
-  @apply border border-white/10 bg-dark-accent/70 backdrop-blur-md;
+  @apply border border-white/5 bg-dark-card/60 backdrop-blur-lg;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(0, 102, 204, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 102, 204, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(208, 255, 164, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(208, 255, 164, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
 }
 
-/* Marquee skills animation - slow horizontal scroll */
+/* Marquee skills animation - smooth and optimized */
 .marquee-track {
-  animation: marquee 45s linear infinite;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
 }
 .marquee-track.marquee-pause {
   animation-play-state: paused;
@@ -74,10 +76,21 @@ body {
   gap: 2rem;
 }
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Scrollbar customization for futuristic feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000181; 
+}
+::-webkit-scrollbar-thumb {
+  background: #006EE9; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D0FFA4; 
 }

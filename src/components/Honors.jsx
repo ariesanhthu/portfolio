@@ -27,31 +27,34 @@ const honors = [
 
 const HonorCard = ({ honor, index }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="glass-effect p-6 rounded-lg hover:border-primary/30 transition-colors"
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.6, delay: index * 0.15, type: "spring", stiffness: 100 }}
+    className="glass-effect p-6 md:p-8 rounded-xl hover:border-secondary/50 hover:bg-dark-accent/30 transition-all duration-300 relative group overflow-hidden"
   >
-    <div className="flex items-start justify-between gap-4">
+    <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    
+    <div className="flex flex-col md:flex-row items-start justify-between gap-4 relative z-10">
       <div>
-        <div className="flex items-center gap-2 mb-1">
-          <FaTrophy className="text-primary text-lg" />
-          <span className="text-primary font-bold">{honor.title}</span>
+        <div className="flex items-center gap-3 mb-2">
+          <FaTrophy className="text-secondary text-xl drop-shadow-[0_0_8px_#bc13fe] animate-pulse-slow" />
+          <span className="text-secondary font-mono tracking-wider font-bold drop-shadow-[0_0_2px_#bc13fe]">{honor.title}</span>
         </div>
-        <h3 className="text-xl font-bold text-light">{honor.event}</h3>
-        <p className="text-light/60 text-sm mb-2">{honor.issuer}</p>
-        <p className="text-light/80">{honor.description}</p>
+        <h3 className="text-xl md:text-2xl font-bold text-light group-hover:text-primary transition-colors duration-300 mt-2">{honor.event}</h3>
+        <p className="text-light/50 font-mono text-sm mb-4 border-b border-white/5 pb-2 inline-block">{honor.issuer}</p>
+        <p className="text-light/80 leading-relaxed">{honor.description}</p>
       </div>
       {honor.certificate && (
         <a
           href={honor.certificate}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 text-primary hover:text-secondary transition-colors"
+          className="shrink-0 flex items-center justify-center w-12 h-12 rounded-full border border-primary/30 text-primary hover:bg-primary hover:text-dark hover:scale-110 hover:shadow-[0_0_15px_#00f3ff] transition-all duration-300 mt-4 md:mt-0"
           aria-label="View certificate"
+          title="View certificate"
         >
-          <FaExternalLinkAlt size={18} />
+          <FaExternalLinkAlt size={16} />
         </a>
       )}
     </div>
@@ -60,18 +63,23 @@ const HonorCard = ({ honor, index }) => (
 
 const Honors = () => {
   return (
-    <section id="honors" className="section-padding bg-darker">
-      <div className="container-width">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold text-center mb-12 gradient-text"
+    <section id="honors" className="section-padding bg-darker relative">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-secondary/10 via-darker to-darker pointer-events-none" />
+      
+      <div className="container-width relative z-10">
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="text-center mb-16"
         >
-          Honors & Awards
-        </motion.h2>
+          <span className="text-secondary font-mono text-sm tracking-widest uppercase mb-2 block">Achievements</span>
+          <h2 className="text-3xl md:text-5xl font-bold gradient-text pb-2">
+            Honors & Awards
+          </h2>
+        </motion.div>
 
-        <div className="space-y-6 max-w-3xl mx-auto">
+        <div className="space-y-6 max-w-4xl mx-auto">
           {honors.map((honor, index) => (
             <HonorCard key={honor.event} honor={honor} index={index} />
           ))}
