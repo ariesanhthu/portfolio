@@ -100,12 +100,12 @@ const Projects = () => {
     },
     {
       title: "AI-Powered Virtual Try-On Clothing Store",
-      subtitle: "Tech Lead - Fullstack | Team size: 4",
+      subtitle: "AI Engineer | Team size: 4",
       description: "E-commerce with AI virtual try-on; Next.js, Sanity CMS.",
       technologies: ["Next.js", "React", "TypeScript", "Sanity"],
       githubUrl: "https://github.com/ariesanhthu/vton-webstore",
-      liveUrl: "https://vton-webstore.vercel.app",
-      image: "https://raw.githubusercontent.com/ariesanhthu/ariesanhthu.github.io/refs/heads/main/Screenshot%20(1436).png"
+      // liveUrl: "https://vton-webstore.vercel.app",
+      image: "/AI4S.jpg"
     },
   ];
 
