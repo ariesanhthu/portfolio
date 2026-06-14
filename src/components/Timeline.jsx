@@ -62,8 +62,8 @@ const EducationItem = ({ year, title, school, description, index }) => (
 const Timeline = () => {
   const experiences = [
     {
-      year: 'Jun 2024 - Present',
-      title: 'Web Developer',
+      year: 'Jun 2024 - Jan 2025',
+      title: 'Freelance Fullstack Web Developer',
       company: 'Blue Moonlight Travel & Environment CO., LTD',
       companyUrl: 'https://www.facebook.com/profile.php?id=61569547720275',
       achievements: [
@@ -80,7 +80,7 @@ const Timeline = () => {
       year: '2023 - Present',
       title: 'BSc Information Technology',
       school: 'University of Science, VNUHCM',
-      description: 'GPA: 3.3/4.0',
+      description: 'GPA: 3.4/4.0',
     },
     {
       year: '2020 - 2023',
