@@ -72,6 +72,15 @@ const ProjectCard = ({ title, subtitle, description, technologies, githubUrl, li
 const Projects = () => {
   const projects = [
     {
+      title: "AI Livestream Video Generation Service",
+      subtitle: "GenAI Engineer / AI Application Engineer | Team Project",
+      description: "Designed an end-to-end AI video pipeline that turns product references, model images, voice inputs, and selling actions into structured livestream scenes and short videos. Integrated LLM-based JSON planning, Wav2Lip, OmniVoice TTS, subtitles, and FFmpeg composition, generating 3-5 second segments in about 30 seconds.",
+      technologies: ["LLM", "Wav2Lip", "OmniVoice TTS", "FFmpeg", "GenAI"],
+      githubUrl: "https://github.com/sea-hackathon-2026/ai-service",
+      liveUrl: "https://drive.google.com/drive/folders/1eMtxpONXSVCrGTvJjqRXar-912CP0qTJ?usp=sharing",
+      image: "/1stream.jpg"
+    },
+    {
       title: "Agentic Stock Trading System (Stockie)",
       subtitle: "Tech Lead - AI | Team of 6",
       description: "Agentic trading with ADK; RAG & multi-agent LLM for market analysis; 90% test coverage, <5s latency.",

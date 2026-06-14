@@ -4,6 +4,13 @@ import { FaTrophy, FaExternalLinkAlt } from 'react-icons/fa';
 
 const honors = [
   {
+    title: '2nd Prize, AI Track',
+    event: 'Cardano SEA Hackathon 2026',
+    issuer: 'Cardano Southeast Asia',
+    description: 'Built an AI livestream video generation service with LLM-driven scene planning, synchronized talking-head generation, text-to-speech, subtitles, and automated video composition.',
+    certificate: 'https://drive.google.com/drive/folders/1eMtxpONXSVCrGTvJjqRXar-912CP0qTJ?usp=sharing',
+  },
+  {
     title: 'Finalist (Top 30/1500)',
     event: 'Univentures 2025',
     issuer: 'Block71',
